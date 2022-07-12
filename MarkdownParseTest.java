@@ -207,4 +207,12 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(content));
     }
+
+    @Test
+    public void testFile9() throws IOException{
+        Path fileName = Path.of("test-file9.md");
+        String content = Files.readString(fileName);
+        assertEquals(List.of("https://cecilia-martinez.github.io/cse15l-lab-reports/index.html"), MarkdownParse.getLinks(content));
+    }
+
 }
